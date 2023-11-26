@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+.container {
+    width: 450px;
+    height: 550px;
+    background-color: transparent;
+    border: 3px solid #00eeff;
+    border-radius: 50px;
+    border-top-left-radius: 250px;
+    border-top-right-radius: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 15px #00eeff;
+}
+
+/* ==== Analog Clock ==== */
+.analog-clock {
+    position: relative;
+    width: 390px;
+    height: 390px;
+    border: 2px solid #00eeff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-align-last: center;
+    box-shadow: 0 0 5px #00eeff;
+}
+
+.analog-clock span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 600;
+}
+.analog-clock .number-1 {
+    transform: rotate(30deg);
+}
+.analog-clock .number-2 {
+    transform: rotate(60deg);
+}
+.analog-clock .number-3 {
+    transform: rotate(90deg);
+}
+.analog-clock .number-4 {
+    transform: rotate(120deg);
+}
+.analog-clock .number-5 {
+    transform: rotate(150deg);
+}
+.analog-clock .number-6 {
+    transform: rotate(180deg);
+}
+.analog-clock .number-7 {
+    transform: rotate(210deg);
+}
+.analog-clock .number-8 {
+    transform: rotate(240deg);
+}
+.analog-clock .number-9 {
+    transform: rotate(270deg);
+}
+.analog-clock .number-10 {
+    transform: rotate(300deg);
+}
+.analog-clock .number-11 {
+    transform: rotate(330deg);
+}
+.analog-clock .number-12 {
+    transform: rotate(0);
+}
+
+.analog-clock .hours,
+.minutes, .seconds {
+    position: absolute;
+    bottom: 50%;
+    border: 2px solid #00eeff;
+    border-radius: 20px;
+    transform-origin: bottom;
+}
+
+.analog-clock .hours {
+    width: 10px;
+    height: 35%;
+    background-color: #000;
+    z-index: 1;
+}
+.analog-clock .hours::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #00eeff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00eeff;
+}
+
+.analog-clock .minutes {
+    width: 10px;
+    height: 40%;
+    background-color: #000;
+    z-index: 2;
+}
+.analog-clock .minutes::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #00eeff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00eeff;
+}
+
+.analog-clock .seconds {
+    width: 8px;
+    height: 45%;
+    background-color: #ff0000;
+    z-index: 3;
+}
+.analog-clock .seconds::after {
+    content: '';
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.analog-clock::after  {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+/* ==== Digital Clock ==== */
+.digital-clock {
+    width: 390px;
+    height: 75px;
+    border: 2px solid #00eeff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 5px #00eeff;
+}
+
+.digital-clock .time h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.digital-clock .time small {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}   
